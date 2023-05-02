@@ -1,14 +1,14 @@
 #include <stdio.h>
 #include "menu.h"
 #include "graphics.h"
-IMAGE *background;//тож нерабочая хуйня
+//IMAGE *background;//тож нерабочая хуйня
 Button but[3];// мб добавить еще кнопок 
 
 //============= МЕНЮ =============
 void init_menu(){ // инициализация кнопок меню
    char s[11];
-   IMAGE *background = loadBMP("background.BMP");// че не работает то
-   putimage(0,0,background,COPY_PUT);
+   //IMAGE *background = loadBMP("background.BMP");// че не работает то
+   //putimage(0,0,background,COPY_PUT);
    for(int i=0; i <3; i++){
          but[i].dx = 200; but[i].dy = 60; 
          but[i].x = 270; but[i].y = 150 + i * (but[i].dy+5);   

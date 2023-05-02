@@ -29,25 +29,27 @@ int main(){
 }
 //============================
 void init(){ // инициализация программы
-   initwindow(wx, wy, "Крестики-нолики", 200, 200);
+   initwindow(wx, wy, "Шахматы", 200, 200);
    init_menu(); // инициализация меню   
 } // init()
 
 void zastavka(){ // zastavka(rework)
    int sx = wx/2;
    int sy = wy/2;
-   IMAGE * bmp1 = loadBMP("zast.bmp");
-   putimage(0, 0, bmp1, COPY_PUT);
+   IMAGE * zastavka1 = loadBMP("pic/zast.bmp");
+   putimage(0, 0, zastavka1, COPY_PUT);
    outtextxy(325, 300, "Нажми любую клавишу");
    getch();
-   freeimage(bmp1);
+   freeimage(zastavka1);
 }// zastavka()
 
 //==========================================
-void about(){ // about dopil
+void about(){ // about dopil // открывает картинку при нажатии на клавишу Правила(изменить название клавиши на " О программе")
    clearviewport();
-   outtextxy(100, 100, "О программе");
+   IMAGE *aboutme = loadBMP("pic/about.BMP");
+   putimage(0,0,aboutme,COPY_PUT);
    getch();
+   freeimage(aboutme);
 }
 void close_pr(){ // exit
    closegraph();

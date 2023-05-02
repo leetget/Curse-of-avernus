@@ -5,7 +5,6 @@
 !menu.h graphics.h keys_n_colors.h #<#>
  struct@button _type_ #<menu.h>
 about() -> void #<ch.cpp>
-background : IMAGE* #<menu.cpp>
 but : Button[] #<menu.cpp>
 button _type_ #<menu.h>
 close_game() -> void #<game.h>
@@ -24,4 +23,6 @@ zastavka() -> void #<ch.cpp>
 	button::y : int #<menu.h>
 	button::dx : int #<menu.h>
 	button::dy : int #<menu.h>
+	button::zastavka1 : IMAGE* #<menu.h>
+	button::aboutme : IMAGE* #<menu.h>
 	button::bmp : IMAGE* #<menu.h>
