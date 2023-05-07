@@ -8,6 +8,7 @@ typedef struct button{
 } Button;
 void init_menu();
 void draw_menu();
+void load();
 int menu(int st);
 void init_menu(); // инициализация меню
 #endif // _MENU_ 

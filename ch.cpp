@@ -6,7 +6,6 @@
 // прототипы функций=================================
 void init(); // инициализация параметров игры
 void zastavka();
-//void load();
 //============================
 void about();
 void rules();
@@ -16,7 +15,6 @@ int main(){
    int st = 1;
    init();
    zastavka();
-   //load();
    do{
       st = menu(st);
       switch(st){
@@ -38,7 +36,7 @@ void zastavka(){ // zastavka(rework)
    int sy = wy/2;
    IMAGE * zastavka1 = loadBMP("pic/zast.bmp");
    putimage(0, 0, zastavka1, COPY_PUT);
-   outtextxy(325, 300, "Нажми любую клавишу");
+   outtextxy(560, 360, "Нажми любую клавишу");
    getch();
    freeimage(zastavka1);
 }// zastavka()

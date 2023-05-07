@@ -1,17 +1,17 @@
 #include <stdio.h>
 #include "menu.h"
 #include "graphics.h"
-//IMAGE *background;//тож нерабочая хуйня
+IMAGE *background;//рабочая хуйня
 Button but[3];// мб добавить еще кнопок 
-
+void load(){
+   background = loadBMP("pic/background.bmp");
+}   
 //============= МЕНЮ =============
 void init_menu(){ // инициализация кнопок меню
    char s[11];
-   //IMAGE *background = loadBMP("background.BMP");// че не работает то
-   //putimage(0,0,background,COPY_PUT);
    for(int i=0; i <3; i++){
-         but[i].dx = 200; but[i].dy = 60; 
-         but[i].x = 270; but[i].y = 150 + i * (but[i].dy+5);   
+         but[i].dx = 1000; but[i].dy = 60; 
+         but[i].x = 540; but[i].y = 220 + i * (but[i].dy+5);   
          sprintf(s,"buttons/menu%d.bmp", i+1);// загрузка кнопок из папки buttons
         printf("%s\n", s);// в кмд показывает выгружаемые файлы
          but[i].bmp = loadBMP(s);
@@ -19,6 +19,8 @@ void init_menu(){ // инициализация кнопок меню
 }
 void draw_menu(){ // отрисовка кнопок меню
    clearviewport();
+   load();
+   putimage(0,0,background,COPY_PUT);
    for(int i=0; i <3; i++){
         putimage(but[i].x , but[i].y, but[i].bmp, COPY_PUT);
    }

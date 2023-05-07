@@ -5,6 +5,7 @@
 !menu.h graphics.h keys_n_colors.h #<#>
  struct@button _type_ #<menu.h>
 about() -> void #<ch.cpp>
+background : IMAGE* #<menu.cpp>
 but : Button[] #<menu.cpp>
 button _type_ #<menu.h>
 close_game() -> void #<game.h>
@@ -12,6 +13,7 @@ close_pr() -> void #<ch.cpp>
 draw_menu() -> void #<menu.h>
 init() -> void #<ch.cpp>
 init_menu() -> void #<menu.h>
+load() -> void #<menu.h>
 main() -> int #<ch.cpp>
 menu(int st) -> int #<menu.h>
 newgame() -> void #<game.h>

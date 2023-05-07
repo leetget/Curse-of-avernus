@@ -1,8 +1,8 @@
 #include "graphics.h"
 #ifndef _GAME_
 #define _GAME_
-#define wx 800
-#define wy 600
+#define wx 1280
+#define wy 720
 void newgame(); // start
 //void init_pole(); // sozdaem pole
 //void draw_pole(); // otrisovka
